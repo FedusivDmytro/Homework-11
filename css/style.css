@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container--wide {
+  padding: 0 0;
+}
+
+.orange-text {
+  color: #FF6332;
+  font-weight: 900;
+}
+
+.header {
+  height: 100vh;
+}
+.header__wrap {
+  background-image: url(../img/header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header__wrap::before {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background-color: #000000;
+  opacity: 0.3;
+}
+.header__title {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-align: center;
+  z-index: 1;
+  line-height: 40px;
+}
+
+.collage__img {
+  width: 100%;
+  display: block;
+  margin: 15px 0;
+}
+.collage__items {
+  list-style: none;
+}
+
+.collage-wide__items {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.collage-wide__items::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #000000;
+  opacity: 0.3;
+}
+.collage-wide__item {
+  width: 50%;
+  flex-grow: 1;
+}
+.collage-wide__img {
+  display: flex;
+  width: 100%;
+}
+.collage-wide__wrap {
+  position: relative;
+}
+.collage-wide__title {
+  font-size: 30px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.footer__copyright {
+  height: 30px;
+  background-color: #000000;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+@media screen and (min-width: 710px) {
+  .header__title {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .collage__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .collage__item {
+    width: 50%;
+  }
+  .collage__img {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+  }
+
+  .collage-wide__item {
+    width: 25%;
+  }
+  .collage-wide__title {
+    font-size: 48px;
+  }
+
+  .footer__copyright {
+    height: 69px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .collage__item {
+    width: 33%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
