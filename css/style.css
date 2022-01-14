@@ -1,23 +1,19 @@
-* {
-  padding: 0;
-  margin: 0;
-  line-height: 1;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 30px;
 }
 
 .container {
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .container--wide {
-  padding: 0 0;
+  padding: 0;
+  max-width: 100%;
+  position: relative;
 }
 
 .orange-text {
@@ -26,9 +22,6 @@ body {
 }
 
 .header {
-  height: 100vh;
-}
-.header__wrap {
   background-image: url(../img/header.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,57 +32,56 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
 }
-.header__wrap::before {
+.header::before {
   content: "";
+  position: absolute;
   height: 100vh;
   width: 100%;
-  position: absolute;
   background-color: #000000;
-  opacity: 0.3;
+  opacity: 0.49;
+  z-index: -1;
 }
 .header__title {
-  text-transform: uppercase;
+  line-height: 140%;
   font-weight: 300;
-  color: #FFFFFF;
   text-align: center;
-  z-index: 1;
-  line-height: 40px;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 .collage__img {
-  width: 100%;
   display: block;
+  width: 100%;
+  height: 100%;
   margin: 15px 0;
 }
-.collage__items {
+.collage__item {
   list-style: none;
 }
 
-.collage-wide__items {
+.collage-wide {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  position: relative;
 }
-.collage-wide__items::before {
+.collage-wide::before {
   content: "";
   height: 100%;
   width: 100%;
   position: absolute;
   background-color: #000000;
-  opacity: 0.3;
+  opacity: 0.6;
 }
 .collage-wide__item {
   width: 50%;
-  flex-grow: 1;
 }
 .collage-wide__img {
   display: flex;
   width: 100%;
-}
-.collage-wide__wrap {
-  position: relative;
+  height: 100%;
 }
 .collage-wide__title {
   font-size: 30px;
@@ -101,7 +93,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   display: block;
-  width: 100%;
+  width: 90%;
 }
 
 .footer__copyright {
@@ -114,24 +106,19 @@ body {
   font-size: 10px;
 }
 
-@media screen and (min-width: 710px) {
+@media screen and (min-width: 1000px) {
   .header__title {
     font-size: 48px;
-    line-height: 60px;
   }
 
-  .collage__items {
+  .collage {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 64px;
   }
   .collage__item {
-    width: 50%;
-  }
-  .collage__img {
-    margin: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-right: 10px;
+    width: 31%;
+    padding: 1%;
   }
 
   .collage-wide__item {
@@ -144,11 +131,6 @@ body {
   .footer__copyright {
     height: 69px;
     font-size: 18px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .collage__item {
-    width: 33%;
   }
 }
 
